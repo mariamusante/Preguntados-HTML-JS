@@ -1,0 +1,532 @@
+
+
+
+
+/*Paleta de colores que vamos a usar:
+Rosa: #FF9AA2
+Naranja: #FFB7B2
+Naranja mas claro xd: #FFDAC1
+Amarillo: #E2F0CB
+Verde: #7dd1c3
+Gris: #C7CEEA
+Para todo usen font-family:calibri;
+Ademas de esos colores obvio q se usan negro y blanco saludos.
+*/
+.fondo{
+    background-color: #FF9AA2;
+}
+.header{
+    display:grid;
+    grid-template-columns: 10% 30% 20% 20% 20%;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 11px 18px 11px rgba(0,0,0,0.52);
+}
+.logo{
+    height:40px;
+    grid-column: 1/2;
+    margin-top:5px;
+    margin-bottom:13px;
+    margin-left:30px;
+    align-self: center;
+    justify-self:right;
+}
+.logo2{
+    
+    grid-column: 1/2;
+    margin-bottom:13px;
+    margin-left:30px;
+    align-self: center;
+    justify-self:right;
+    width: 50%;
+}
+
+.preguntados{
+    height:20px;
+    grid-column: 2/3;
+    margin-top:9px;
+    margin-bottom:13px;
+    margin-left:30px;
+    align-self: left;
+    justify-self:left;
+}
+.comoJugar{
+    grid-column: 4/5;
+    font-family:calibri;
+    color:white;
+    font-size:20px;
+    align-self: center;
+    justify-self: center;
+}
+.comoJugar:hover{
+    text-decoration:underline;
+}
+.creditos{
+    grid-column: 5/6;
+    font-family:calibri;
+    color:white;
+    font-size:20px;
+    align-self: center;
+    justify-self: center;
+}
+.creditos:hover{
+    text-decoration:underline;
+}
+.footer{
+    background-color: black;
+    height: 30px;
+    margin-bottom: 0%;
+    box-shadow: 0px 11px 18px 11px rgba(0,0,0,0.52);
+}
+.txtFooter{
+    font-family: calibri;
+    color:white;
+    font-size: 10px;
+    margin-left:20px;
+}
+/*INICIO------------------------------------------------------------------------------------------------------*/
+.inicioCSS{
+    background-color: #FF9AA2;
+    
+}
+
+.estasListo{
+    margin-top:130px;
+    display:block;
+    margin:auto;
+    grid-column: 2/5;
+    grid-row: 2/3;
+
+}
+.btnComenzar{
+    font-family:calibri;
+    background-color:#7dd1c3 ;
+    border-radius: 20px;
+    border-color:transparent;
+    font-size:30px;
+    padding:5px;
+    align-self: center;
+    justify-self: center;
+    display:block;
+    margin:auto;
+    grid-column:3/4;
+    grid-row:3/4;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+
+}
+.btnComenzar:hover{
+    border-color:black;
+    font-weight: bold;
+}
+.personajes{
+  align-self:center;
+  margin-left:10%;
+
+}
+.muñeco{
+    margin-top:60px;
+    height: 290px;
+}
+/*---------------------COMO JUGAR------------------------------------------------*/
+.comoJuegoCSS{
+    display:grid;
+    grid-template-columns: 40% 60%;
+}
+.dibujoNene {
+    margin-top:80px;
+    height:200px;
+    grid-column: 1/2;
+    align-self:right;
+    justify-self: right;
+    margin-right: 130px;
+    grid-row: 1/3;
+}
+.cjTitulo{
+    margin-top:80px;
+    font-family: calibri;
+    font-weight: bold;
+    font-size:40px;
+
+}
+.cjSubTit{
+
+    font-family: calibri;
+    grid-column: 2/3;
+    text-align: justify;
+    margin-right:100px;
+    font-size:30px;
+    margin-bottom:40px;
+
+}
+.jugar{
+    grid-column:2/3;
+    font-family: calibri;
+    font-size:20px;
+    width: 40%;
+    border-radius: 20px;
+    background-color: #7dd1c3;
+    border-color:transparent;
+    text-align: center;
+    margin-left:30%;
+    margin-right:30%;
+    margin-bottom:40px;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+}
+.jugar:hover{
+    border-color:black;
+    font-weight: bold;
+}
+/*---------------------------PEDIR NOMBRE---------------------------------------*/
+.comenzar{
+    display:grid; 
+    grid-template-columns: 40% 30% 30%;
+}
+.dibujoNene2{
+    margin-top:120px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    margin-left:40px;
+    margin-bottom:80px;
+    
+}
+.txtPedirNombre{
+    margin-top:200px;
+    font-family: calibri;
+    font-weight: bold;
+    font-size:40px;
+    text-align: justify;
+    grid-column: 2/4;
+
+}
+.txtPedirNombre2{
+    font-family: calibri;
+    grid-column: 2/4;
+    text-align: justify;
+    margin-right:100px;
+    font-size:30px;
+
+}
+.nombre{
+    font-family: calibri;
+    grid-column: 2/3;
+    text-align: center;
+    margin-right:100px;
+    font-size:30px;
+}
+.nombreJugador{
+    grid-column: 3/4;
+    font-family:calibri;
+    border-radius: 20px;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    margin-top:12px;
+    border-color:transparent;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+
+}
+.nombreJugador:hover{
+    border-color:black;
+}
+
+.btnRegistrarNombre{
+    font-family:calibri;
+    background-color:#7dd1c3 ;
+    border-radius: 20px;
+    text-align: center;
+    border-color:transparent;
+    font-size:25px;
+    align-self: center;
+    justify-self: center;
+    padding:5px;
+    width: 30%;
+    grid-column: 2/4;
+    margin-bottom:30px;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+}
+
+.btnRegistrarNombre:hover{
+    border-color:black;
+    font-weight: bold;
+}
+.continuar1{
+    font-family:calibri;
+    font-size:20px;
+    margin-top:10px;
+    margin-bottom:30px;
+    grid-column: 2/4;
+}
+.aca{
+    font-weight: bold;
+}
+.aca:hover{
+    text-decoration: underline;
+}
+
+/*----------------------------------ELECCIÓN CATEGORÍA----------------------------------------*/
+.eleccionCategoria{
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.elegi{
+    grid-column: 2/6;
+    font-family: calibri;
+    font-size: 50px;
+    font-weight:bold;
+    grid-row:1/2;
+    text-align:center;
+    margin-top:180px;
+}
+.neneDeCote{
+    margin-top:80px;
+    height: 250px;
+}
+.dibujoCategoria{
+    width: 200px;
+    margin-left:15%;
+    margin-top:100px;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+    background-color: #FFB7B2;
+}
+.txtTituloPersonaje{
+    font-family: calibri;
+    font-size:30px;
+    text-align: center;
+    margin-top:40px;
+    margin-bottom:30px;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+}
+
+.dibujoCategoria:hover{
+    width: 205px;
+}
+.txtTituloPersonaje:hover{
+    text-decoration: underline;
+}
+/*--------------------------------------------Cuando empieza el juego----------------------------*/
+.categoriaElegida{
+    display:grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.btnComenzarJuego{
+    font-family:calibri;
+    background-color:#7dd1c3 ;
+    border-radius: 20px;
+    text-align: center;
+    border-color:transparent;
+    font-size:25px;
+    align-self: center;
+    justify-self: center;
+    padding:5px;
+    width: 30%;
+    grid-column: 1/4;
+    margin-bottom:200px;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+}
+.btnComenzarJuego:hover{
+    font-weight: bold;
+    border-color: black;
+}
+.categoriaTit{
+    grid-column: 2/3;
+    font-family: calibri;
+    font-size: 50px;
+    font-weight:bold;
+    grid-row:1/2;
+    text-align:center;
+    margin-top:180px;
+}
+.personajeElegido{
+    margin-top:150px;
+    margin-right:30px;
+}
+
+/*-----------------------------Parte de las preguntas-----------------------------------------*/
+.imgPregunta{
+
+    width: 50%;
+    display: block;
+    margin:auto;
+    margin-top:10px;
+    border-radius: 10px;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+
+}
+.tituloPregunta{
+
+    font-family: calibri;
+    font-size: 30px;
+    font-weight:bold;
+    text-align:center;
+    margin-top:80px;
+
+}
+.numPregunta{
+    font-family: calibri;
+    font-size: 30px;
+    font-weight:bold;
+    text-align:center;
+    margin-top:80px;
+   
+}
+.arribaPreguntas{
+    display: grid;
+    grid-template-columns: 25% 50% 25% ;
+}
+.personajePreguntas{
+    width: 20%;
+    margin-top:70px;
+}
+
+.btnRespuesta{
+
+    font-family:calibri;
+    background-color:#7dd1c3 ;
+    border-radius: 20px;
+    text-align: center;
+    border-color:transparent;
+    font-size:20px;
+    padding:5px;
+    width: 60%;
+    margin-top:20px;
+    margin-left: 20%;
+}
+.btnRespuesta:hover{
+    border-color:black;
+    font-weight: bold;
+}
+.progress{
+    width: 50%;
+    margin-left: 25%;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+}
+/*-----------------------------------------------------RANKING-------------------------------*/
+.elRanking{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    
+}
+.neneDeCoteRanking{
+    margin-top:80px;
+    height: 250px;
+}
+.txtRanking{
+    grid-column: 2/3;
+    font-family: calibri;
+    font-size: 30px;
+    font-weight:bold;
+    grid-row:1/2;
+    text-align:center;
+    margin-top:180px;
+    margin-right: 30px;
+
+}
+.btnDenuevo{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    
+}
+.btnAgain{
+    margin-top: 40px;
+    font-family:calibri;
+    background-color:#7dd1c3 ;
+    border-radius: 20px;
+    text-align: center;
+    border-color:transparent;
+    font-size:20px;
+    align-self: center;
+    justify-self: center;
+    padding:5px;
+    width: 40%;
+    margin-bottom:30px;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+}
+.btnAgain:hover{
+    font-weight: bold;
+    border-color: black;
+}
+.btnAgain2{
+    grid-column: 1/3;
+    font-family:calibri;
+    background-color:#7dd1c3 ;
+    border-radius: 20px;
+    text-align: center;
+    border-color:transparent;
+    font-size:20px;
+    align-self: center;
+    justify-self: center;
+    padding:5px;
+    width: 20%;
+    margin-bottom:50px;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+}
+.btnAgain2:hover{
+    font-weight: bold;
+    border-color: black;
+}
+/*------------------------------------------------------CREDITOS-------------------------------------*/
+
+.htmlCreditos{
+    display:grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.nenedeCote4{
+    width: 100%;
+    margin-top:50px;
+}
+.gracias{
+    grid-column: 2/3;
+    font-family: calibri;
+    font-size: 60px;
+    font-weight:bold;
+    grid-row:1/2;
+    text-align:center;
+    margin-top:180px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.52);
+   
+}
+.creditos2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.credInfo{
+    font-family: calibri;
+    font-size: 30px;
+    text-align:left;
+    margin-left: 10px;
+    margin-bottom:20px;
+
+}
+.credTit{
+    font-family: calibri;
+    font-size: 30px;
+    font-weight:bold;
+    text-align:right;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.52);
+    margin-right: 10px;
+    margin-bottom:20px;
+}
+.btnVolverInicio{
+
+    font-family:calibri;
+    background-color:#7dd1c3 ;
+    border-radius: 20px;
+    text-align: center;
+    border-color:transparent;
+    font-size:20px;
+    align-self: center;
+    justify-self: center;
+    padding:5px;
+    width: 20%;
+    margin-left: 40%;
+    margin-top:40px;
+    margin-bottom:50px;
+    box-shadow: 0px 11px 68px 1px rgba(0,0,0,0.52);
+    
+}
+.btnVolverInicio:hover{
+    font-weight: bold;
+    border-color: black;
+}

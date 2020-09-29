@@ -1,0 +1,134 @@
+
+    <div id="comoJuego" class="comoJuego">
+            <div class="comoJuegoCSS">
+                <div id="comoJuego1"class="dibujoNene"><img src="imagenes/nene.png"></div>
+                <div id="comoJuego2" class="cjTitulo">¡Hola!</div>
+                <div id="comoJuego3" class="cjSubTit">Me llamo Marcos, y me enteré que no sabés cómo jugar... ¡No te preocupes! Es muy fácil.<br> Para empezar debes elegir una categoría (Cultura general, ciencia, entretenimiento o deportes) o, si sos indeciso,
+                    tocá la opción de aleatorio para que el juego decida por vos. <br> Una vez que hayas elegido una categoría vas a tener 5 preguntas que van a ir apareciendo de a una; tenés 10 segundos para responderlas, pero no te preocupes, son multiple choice ;) <br>
+                    Espero que disfrutes respondiendo las preguntas. Cuando termines con las 5 vas a ver tu puntuación y tu posición en el gran ranking de PREGUNTADOS.<br> Espero que hayas comprendido, <br>¡Mucha Suerte!
+                </div>
+            </div>
+        </div>
+
+
+         <div class="eleccionCategoria">
+            <img class="neneDeCote" src="imagenes/neneDeCote.png">
+            <div class="elegi">¡Elegí tu categoría!</div>
+            <img class="dibujoCategoria" src="imagenes/deportesPersonaje.png">
+            <img class="dibujoCategoria"src="imagenes/cienciaPersonaje.png">
+            <img class="dibujoCategoria" src="imagenes/aleatorioPersonaje.png">
+            <img class="dibujoCategoria" src="imagenes/culturageneralPersonaje.png">
+            <img class="dibujoCategoria" src="imagenes/entretenimientoPersonaje.png">
+            <div class="txtTituloPersonaje">Deportes</div>
+            <div class="txtTituloPersonaje">Ciencia</div>
+            <div class="txtTituloPersonaje">Aleatorio</div>
+            <div class="txtTituloPersonaje">Cultura General</div>
+            <div class="txtTituloPersonaje">Entretenimiento</div>
+        </div>
+
+
+        for(let i = 0;i<5;i++)
+   {
+        let aleatorio = Math.floor(Math.random()*(6));
+        for(let j = 0; j<ordenPreguntas.length;j++)
+        {
+            while(aleatorio == ordenPreguntas[j])
+            {
+                aleatorio = Math.floor(Math.random()*(6));
+            };
+        }
+        ordenPreguntas.push(aleatorio);
+    }
+
+
+
+
+
+    function siguientePregunta(correctoONo , numeroDePregunta, categoriaElegida,ordenAleatorioP,ordenAleatorioR,cantidadRta) //pasa a la siguiente pregunta
+{
+    posicionAleatorio = numeroDePregunta + 1;
+
+    if(correctoONo == 0)
+    {
+        infoJugadores.puntuacion[posJugador] += 1;
+    }
+
+    if (numeroDePregunta == 4)
+    {
+        ranking();
+    }else{
+
+        ordenAleatorioR= funcionAleatorio(0,ordenRespuestas);//Me da el orden aleatorio de las respuestas de la pregunta seleccionada
+        console.log("orden aleatorio de las rta: " , ordenAleatorioR);
+
+        document.getElementById("inicio").innerHTML=`
+            <div class="cuadroPreguntas">
+                <img class="personajePreguntas" src=${categoriasypreguntas[categoriaElegida].personaje}>
+                <div class="nombre">${infoJugadores.nombre[posJugador]}</div>
+                <div id="cambioPregunta">
+                    <div class="tituloPregunta" id="tituloPregunta">${categoriasypreguntas[categoriaElegida].preguntas[ordenAleatorioP[posicionAleatorio]]}</div>
+                    <img class="imgPregunta" id="imgPregunta" src="${categoriasypreguntas[categoriaElegida].imagenes[ordenAleatorioP[posicionAleatorio]]}">
+                    <div class="respuesta" id="respuestas"></div>
+                </div>
+            
+            </div>
+            `
+            document.getElementById("respuestas").innerHTML= funcionRta(categoriaElegida, ordenAleatorioP,ordenAleatorioR,cantidadRta);
+
+        }
+    console.log("Clickeaste la respuesta: ", correctoONo);
+    console.log("Esta es la x pregunta uqe te hicimos: ", numeroDePregunta);
+
+};
+
+respuestasDeLaPregunta += `<button onclick="mostrarPreguntas(${y}, ${posicionAleatorio}, ${categoriaElegida},${ordenAleatorioP},${ordenAleatorioR},${cantidadRta})" class="btnRespuesta" >${categoriasypreguntas[categoriaElegida].respuestas[ordenAleatorioP[posicionAleatorio]][ordenAleatorioR[y]]}</button>`
+
+
+ //Vamos a sacar el mas chiquito y lo vamos a poner adelante de todo con unshift 
+    //y reemplazar por 100 el que estaba en esa posición con splice, ya que nadie puede tener 100 de puntuacion.
+for(var i=0;i<hastaDonde;i++)
+    {
+        mayor= Math.max.apply(null,infoJugadores.puntuacion);
+        for(var j=0;j<posJugador;j++){
+            if (mayor==infoJugadores.puntuacion[j]){
+                infoJugadores.puntuacion.unshift(infoJugadores.puntuacion[j]);
+                infoJugadores.nombre.unshift(infoJugadores.nombre[j]);
+                infoJugadores.categoriaJugada.unshift(infoJugadores.categoriaJugada[j]);
+                infoJugadores.puntuacion.splice(j,1);
+                infoJugadores.nombre.splice(j,1);
+                infoJugadores.categoriaJugada.splice(j,1);
+
+            }
+        }
+    };
+    //Eliminamos lo ultimo de cada propiedad porq estan duplicados; es de cuando no estaban ordenados
+    //el posJugador es, a su vez, la cantidad de jugadores asiq lo usamos como la cantidad a eliminar y el lugar
+    //desde el cual empezar a eliminar.
+
+     /*mayor= Math.max.apply(null,infoJugadores.puntuacion);   
+    for(var i=0;i<hastaDonde;i++)
+    {
+        
+        for(var j=0;j<infoJugadores.puntuacion.length;j++){
+            if (mayor==infoJugadores.puntuacion[j]){
+                posicionRanking[i]=j;
+                sustituto[i]=j;
+            }
+        }
+    };*/
+
+    console.log(infoJugadores);
+
+    /*for(var i=0;i<sustituto.length;i++)
+    {
+        Mayor = Math.max.apply(null, sustituto);
+        console.log("mayor detectado: ", Mayor);
+
+        for(var j=0;j<sustituto.length;j++){
+            if (Mayor==sustituto[j]){
+                posicionRanking[i]=j;
+                sustituto[j]=-1;
+            }
+        }
+       
+    }*/

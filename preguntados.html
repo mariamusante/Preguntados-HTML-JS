@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Preguntados - Musante - 5to A Info</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="imagenes/logoPreguntados.png" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="preguntados.css">
+    </head>
+
+    <body class="fondo">
+
+        <div class="header">
+            <div class="logo"><a onclick="inicio()"><img class="logo" src="imagenes/logoPreguntados.png"></a></div>
+            <div class="preguntados"><a onclick="inicio()"><img class="logo2" src="imagenes/preguntadosLogoV3.png"></a></div>
+            <div class="comoJugar"><a onclick="comoJugar()">¿Cómo Jugar?</a></div>
+            <div class="creditos"><a onclick="creditos()">Créditos</a></div>
+        </div>
+
+
+        <div class="inicio" id="inicio">
+            <div class="inicioCSS">
+                <br>
+                <br>
+                <br>
+                <div class="estasListo"><img class="estasListo" src="imagenes/estasListo_1.png"></div>
+                <br>
+                <div><button type="button" class="btnComenzar" onclick="ingresarNombre()">¡Estoy Listo!</button></div>
+                <div class="personajes">
+                    <img class="muñeco" src="imagenes/culturageneralPersonaje.png">
+                    <img class="muñeco" src="imagenes/deportesPersonaje.png">
+                    <img class="muñeco" src="imagenes/aleatorioPersonaje.png">
+                    <img class="muñeco" src="imagenes/entretenimientoPersonaje.png">
+                    <img class="muñeco" src="imagenes/cienciaPersonaje.png">
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+
+
+        <div class="footer" id="footer">
+            <div class="txtFooter">ETNASUM® Preguntados - Casa Salesiana Pio IX - 5to A Informática - María Musante - 2020</div>
+        </div>
+
+        <script src="preguntados.js"></script>
+        <script src="objetos.js"></script>
+
+    </body>
+</html>
